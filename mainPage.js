@@ -1,28 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {menuList} from "./MenuList";
+import React, { Component } from 'react';
+import MenuList from "./MenuList";
 import {aboutMe} from "./aboutme";
-import {hobbies} from "./hobbies";
-import {skills} from "./skills";
-import {previousExperience} from "./previous_experience";
+import ReactDOM from 'react-dom';
 
-class resume extends react.component {
-    constructor(props){
+
+class resume extends Component {
+    constructor(props) {
         super(props);
 
-        this.state={ choice: aboutMe};
-        this.changeChoice=this.changeChoice.bind(this);
+        this.state = {choice: aboutMe};
+        this.changeChoice = this.changeChoice.bind(this);
     }
+
     changeChoice(newChoice) {
         this.setState({
             choice: newChoice
         });
     }
-    render () {
-        return {
-            <menuList {this.props.choice}/>
 
+    render() {
+        return (
+            <div>Test</div>
+            //<MenuList {this.state.choice} onClick={this.changeChoice}/>
+        )
     }
 }
 
-ReactDOM.render(<resume />, document.getElementById('app'));
+ReactDOM.render(<resume/>, document.getElementById('app'));

@@ -4,8 +4,8 @@ import {skills} from "./skills";
 import {previousExperience} from "./previous_experience";
 import {hobbies} from "./hobbies";
 
-export class menuList extends React.Component {
-    constructor (props){
+export default class MenuList extends React.Component {
+    constructor (props) {
         super(props);
         this.handleClick=this.handleClick.bind(this);
     }
@@ -13,6 +13,7 @@ export class menuList extends React.Component {
         const choice = e.target.value;
         this.props.onClick(choice);
     }
+
     render() {
         return (
             <div>
